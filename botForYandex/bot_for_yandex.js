@@ -5,8 +5,6 @@
 // @description  try to take over the world!
 // @author       You
 // @match        https://yandex.ru/*
-// @match        https://crushdrummers.ru/*
-// @match        https://xn----7sbab5aqcbiddtdj1e1g.xn--p1ai/*
 // @grant        none
 // ==/UserScript==
 let keywords = ["Как звучит флейта","Валторна","Тромбон","Кларнет","Фагот","Гобой","Саксофон"];
@@ -36,13 +34,5 @@ if(btnK!=undefined){
             break; // Прерываем цикл
         }
     }
-    if(nextYandexPage) document.getElementsByClassName('pager__item pager__item_kind_next i-bem link_js_inited')[0].click(); //нажатие на кнопку Далее
+    if(nextYandexPage) document.getElementsByClassName('pager__item_kind_next ')[0].click(); //нажатие на кнопку Далее
 }
-
-// Почему-то кнопка далее на нажимается! Не могу выделить её класс:
-// класс кнопки Далее
-// link link_theme_none link_target_serp pager__item pager__item_kind_next i-bem link_js_inited
-// класс кнопок 1,2,3,..
-// link link_theme_none link_target_serp pager__item pager__item_kind_next i-bem link_js_inited
-//  на мобильной версии:
-// link link_theme_normal more__button i-bem
